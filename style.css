@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Comme:wght@100;200;300;400&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    outline: none; border: none;
+    list-style: none; text-decoration: none;
+    font-family: 'Comme', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+#calendar{
+    background-color: rgb(217, 239, 255);
+    width: 25rem;
+    border-radius: 2%;
+    overflow: hidden;
+}
+
+#calendar .calendar-header{
+    padding: 1rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#calendar .calendar-header .icons{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+#calendar .calendar-header .icons svg{
+    cursor: pointer;
+}
+
+#calendar .calendar-header .month-year{
+    display: flex;
+    gap: 0.5rem;
+}
+
+#calendar .calendar-header span{
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+#calendar .week-days{
+    display: flex;
+}
+
+#calendar .number-days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+#calendar .number-days li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+}
+
+#calendar .number-days li.active span{
+    background-color: rgb(171, 220, 255);
+    padding: 0.7rem;
+    border-radius: 50%;
+}
+
+#calendar .number-days li.prev,
+#calendar .number-days li.next{
+    color: rgb(143, 143, 143);
+}
